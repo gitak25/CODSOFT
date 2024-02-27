@@ -1,0 +1,21 @@
+.text-center{
+    text-align:center;
+  }
+  .mx-auto{
+    margin: auto;
+  }
+  .m-w-20{
+    max-width:25vw;
+  }
+  .flex{
+    display:flex;
+  } 
+  .flex-col{
+    flex-direction: column;
+  }
+  .items-center{
+    align-items: center;
+  }
+  body{
+    background-color:  #1C1C1C;
+}
