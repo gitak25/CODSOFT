@@ -1,3 +1,8 @@
+# Task 2
+## Landing Page
+
+Created a simple landing page of an orphanage using only HTML and CSS. It consist of mission of the orphanage along with children stories and multiple text areas to enter data for contacting. It also comprises of a Support button.
+
 # Task 3
 ## Calculator
 
