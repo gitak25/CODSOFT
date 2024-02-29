@@ -39,16 +39,24 @@ function handleButtonClick(value) {
 }
 
 function evaluateInput() {
-  try {
-    let result = eval(string);
-    if (isNaN(result) || !isFinite(result)) {
-      throw new Error('Invalid input');
+    try {
+      let result = eval(string);
+      console.log('Result:', result);
+      if (isNaN(result)) {
+        throw new Error('Invalid input');
+      } else if (result === Infinity || result === -Infinity) {
+        throw new Error('Divide by zero');
+      }
+      string = result.toString();
+      inputField.value = string;
+    } catch (error) {
+      console.error(error.message);
+      if (error.message === 'Divide by zero') {
+        console.log('Divide by zero detected.'); 
+        alert('Cannot divide by zero!');
+      } else {
+        inputField.value = 'Error';
+      }
     }
-    string = result.toString();
-    inputField.value = string;
-  } 
-  catch (error) {
-    console.error(error.message);
-    inputField.value = 'Error';   
   }
-}
+  
